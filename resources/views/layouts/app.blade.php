@@ -10,13 +10,13 @@
     @livewireAssets
 </head>
 <body>
-    <div class="flex px-12 py-6 border-b border-gray-300">
+    <div class="flex px-12 py-6 border-b border-gray-300 items-center">
         <div class="flex-none">
             @include("components.logo")
         </div>
         <div class="flex-1">
             <div class="float-right">
-                <a href="#">
+                <a target="_blank" href="https://github.com/gissilali/livewire-playground">
                     @include("components.github-logo")
                 </a>
             </div>

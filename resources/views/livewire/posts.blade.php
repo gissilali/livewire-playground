@@ -23,3 +23,17 @@
         </div>
     </div>
 </div>
+@push("scripts")
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const postsContainer = document.querySelector('.posts-container');4
+            postsContainer.addEventListener('scroll', function (event) {
+                const element = event.target;
+                var hasScrolledToBottom = element.scrollHeight - element.scrollTop === element.clientHeight;
+                if(hasScrolledToBottom) {
+                    @this.call('nextPage', {{ $posts->currentPage() + 1 }})
+                }
+            })
+        })
+    </script>
+@endpush

@@ -22,10 +22,11 @@
             </div>
         </div>
     </div>
-    <div class="bg-gray-100 h-screen clearfix">
+    <div class="bg-gray-100 min-h-screen clearfix">
         <div class="px-10 py-4">
             @yield("content")
         </div>
     </div>
+    @stack("scripts")
 </body>
 </html>
